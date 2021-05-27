@@ -1,12 +1,11 @@
 _last updated 27 May, 2021_
 
-
 This page serves as a list of some of the more commonly encountered issues while using the Terminal.
 
 
 ### Quake Mode & Global Summon
 
-Please make sure to check out #8888, which is tracking all the quake-mode and `globalSummon` related issues.
+Please make sure to check out [#8888], which is tracking all the quake-mode and `globalSummon` related issues.
 
 #### What is "Global Summon"
 
@@ -18,7 +17,7 @@ Please make sure to check out #8888, which is tracking all the quake-mode and `g
 
 #### I can't use the `quakeMode`/`globalSummon` keybinding unless I've already launched the Terminal
 
-That's correct - the Terminal needs to be running to be able to register the global hotkeys. You can configure the Terminal to launch on machine startup with `"startOnUserLogin":  true`. We're also using #9996 to track "Allow the Terminal to start up and process global hotkeys without creating a window".
+That's correct - the Terminal needs to be running to be able to register the global hotkeys. You can configure the Terminal to launch on machine startup with `"startOnUserLogin":  true`. We're also using [#9996] to track "Allow the Terminal to start up and process global hotkeys without creating a window".
 
 #### How do I set the size of the `quakeMode` window? 
 
@@ -32,7 +31,7 @@ What you _can_ do, though, is rebind <kbd>win+\`</kbd> to a different `globalSum
 
 Then, your window will still obey your standard `initalPosition`, `initialRows`, etc. settings.
 
-Additionally, #9992 is the issue we're tracking for "Allow configuring global settings per-window name". That means you'll be able to use that to change the settings for the window named `_quake`.
+Additionally, [#9992] is the issue we're tracking for "Allow configuring global settings per-window name". That means you'll be able to use that to change the settings for the window named `_quake`.
 
 #### The `quakeMode` window doesn't have any tabs / How can I have tabs in the quake window
 
@@ -40,9 +39,12 @@ The `_quake` window always opens in ["focus mode"](https://docs.microsoft.com/en
 
 If you don't want the global hotkey to summon the window in quake mode, there are two options:
 * Either re-bind it to a different `globalSummon` action, like the above, without `"name": "_quake"`.
-* Wait patiently for #9992 to allow changing the settings of the `_quake` window name.
+* Wait patiently for [#9992] to allow changing the settings of the `_quake` window name.
 
 #### I want to use a different hotkey to summon different profiles
 
-This is another scenario that'll have to wait for #9992. What you'd end up with is different window names for each profile you want a specific hotkey for. The `defaultProfile` for those windows would be set to whatever profile you want. Then, you'd bind `globalSummon` actions, with the `name` set to each of those window names. 
+This is another scenario that'll have to wait for [#9992]. What you'd end up with is different window names for each profile you want a specific hotkey for. The `defaultProfile` for those windows would be set to whatever profile you want. Then, you'd bind `globalSummon` actions, with the `name` set to each of those window names. 
 
+[#8888]: https://github.com/microsoft/terminal/issues/8888
+[#9992]: https://github.com/microsoft/terminal/issues/9992
+[#9996]: https://github.com/microsoft/terminal/issues/9996
