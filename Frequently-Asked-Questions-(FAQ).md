@@ -1,5 +1,3 @@
-_last updated 27 May, 2021_
-
 This page serves as a list of some of the more commonly encountered issues while using the Terminal.
 
 In addition to this FAQ, please make sure to refer to the [official docs](https://docs.microsoft.com/en-us/windows/terminal). There you can find more detailed info on features of the Terminal, the available settings and how they work, and various tips and tricks for using the Terminal.
