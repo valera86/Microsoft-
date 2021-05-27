@@ -4,6 +4,26 @@ This page serves as a list of some of the more commonly encountered issues while
 
 In addition to this FAQ, please make sure to refer to the [official docs](https://docs.microsoft.com/en-us/windows/terminal). There you can find more detailed info on features of the Terminal, the available settings and how they work, and various tips and tricks for using the Terminal.
 
+### General
+
+#### Where can I find the settings file?
+
+The settings file can be found in the following location:
+* Windows Terminal (Stable): `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+* Windows Terminal (Preview): `%localappdata%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json`
+
+#### The Terminal window disappears immediately on launch!
+
+Before filing a bug, please check your settings file to see if you have `"closeOnExit": "always"` set. It's possible that the Terminal window is closing when the shell application closed immediately, or it's possible that the commandline failed to launch entirely. `"closeOnExit": "graceful"` will help debug if that's the case.
+
+#### Can I use the Terminal on (Windows 7, Windows Server 2019, any other down-level Windows version)
+
+Unfortunately no, and we have no plans to make the Terminal available on operating systems below version 1903. There are some important operating system features we depend on. Namely:
+* XAML Islands is the technology we use to host our XAML UI in a Win32 process. Without that, we'd be unable to display anything. Since XAML Islands is only complete as of 1903, there's nothing we can do about it.
+* 1903 Also added support for side-by-side WinRT component activation, something deep in the COM stack that lets us find our DLLs when they're right next to our EXE.
+
+These are unfortunately features that aren't going to be back-ported to earlier versions of Windows, so we won't be able to bring the Terminal to those versions either.
+
 ### Quake Mode & Global Summon
 
 Please make sure to check out [#8888], which is tracking all the quake-mode and `globalSummon` related issues.
@@ -46,6 +66,11 @@ If you don't want the global hotkey to summon the window in quake mode, there ar
 
 This is another scenario that'll have to wait for [#9992]. What you'd end up with is different window names for each profile you want a specific hotkey for. The `defaultProfile` for those windows would be set to whatever profile you want. Then, you'd bind `globalSummon` actions, with the `name` set to each of those window names. 
 
+#### I want the Terminal to hide on minimize / minimize to the tray
+
+This is a feature that's commonly associated with Quake Mode. Unfortunately, it didn't quite make the cut for 1.9. Never fear! We're working on it currently. Please follow [#5727] for updates on adding this functionality to the Terminal.
+
+[#5727]: https://github.com/microsoft/terminal/issues/5727
 [#8888]: https://github.com/microsoft/terminal/issues/8888
 [#9992]: https://github.com/microsoft/terminal/issues/9992
 [#9996]: https://github.com/microsoft/terminal/issues/9996
