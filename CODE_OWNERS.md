@@ -12,14 +12,20 @@ right person or answer it themselves.
 
 Area | Owner(s) | Github Handles
 -- | -- | --
+Accessibility | Carlos Zamora | @carlos-zamora
 Command Palette | Mike Griese | @zadjii-msft, @don-vito<sup>(1)</sup>
+`conhost.exe` | Michael Niksa | @miniksa
+ConPTY | Mike Griese | @zadjii-msft
 Default Terminal | Michael Niksa | @miniksa
 Hyperlinks | Pankaj Bhojwani | @PankajBhojwani
 Jumplist | Leon Liang | @leonMSFT
+Mouse Input | Carlos Zamora, Pankaj Bhojwani  | @carlos-zamora, @PankajBhojwani
 Panes | Mike Griese, Pankaj Bhojwani | @zadjii-msft, @PankajBhojwani
 Rendering | Michael Niksa | @miniksa
+Selection | Carlos Zamora | @carlos-zamora
 Settings Model | Mike Griese, Carlos Zamora | @zadjii-msft, @carlos-zamora
 Settings UI | Carlos Zamora | @carlos-zamora
+Text Buffer | Michael Niksa, Dustin Howett | @miniksa, @dhowett
 VT Support | Mike Griese, Michael Niksa | @zadjii-msft, @miniksa, @j4james<sup>(1)</sup>
 `wt.exe` Commandline Args | Mike Griese | @zadjii-msft
 
