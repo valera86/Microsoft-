@@ -22,6 +22,22 @@ Unfortunately no, and we have no plans to make the Terminal available on operati
 
 These are unfortunately features that aren't going to be back-ported to earlier versions of Windows, so we won't be able to bring the Terminal to those versions either.
 
+### Transparency
+
+#### Why does acrylic not work?
+
+As a system-wide policy, acrylic is only enabled for the foreground window. So if you activate any other window than the Terminal, the Terminal's acrylic will turn off.
+
+There are other system policies that control when acrylic is or isn't enabled. For example, if your laptop is in power saver mode, or you're accessing your machine through RDP, then acrylic will be disabled. Before filing a bug, make sure that acrylic works in other apps, like Calculator, or the Start Menu.
+
+We're currently using [#7158] to track adding support for "enable acrylic even for inactive Terminal windows" - if you're passionate about this, we'd love your contribution!
+
+#### Can I have non-blurred transparency?
+
+At the moment, no. The thread with the most up-to-date investigation tracking this is [#603]. In [#603 (comment)](https://github.com/microsoft/terminal/issues/603#issuecomment-552470153), we experimented with whole-window unblurred transparency, but as you can see, the prototype wasn't particularly polished. 
+
+At current, the Terminal team is waiting until after Terminal 2.0 to migrate to WinUI 3. We're working with the WinUI team to get this added in to WinUI 3.0. Upstream, this is being tracked in [microsoft/microsoft-ui-xaml#1247]. This is the path we'll be pursuing to get this feature added to the Terminal, because driving this solution also means driving an important dev platform feature for the entire platform, one that'll help improve other applications on Windows as well. This solution will allow us to make individual elements of the Terminal window transparent, rather than the entire window.
+
 ### Quake Mode & Global Summon
 
 Please make sure to check out [#8888], which is tracking all the quake-mode and `globalSummon` related issues.
@@ -68,7 +84,11 @@ This is another scenario that'll have to wait for [#9992]. What you'd end up wit
 
 This is a feature that's commonly associated with Quake Mode. Unfortunately, it didn't quite make the cut for 1.9. Never fear! We're working on it currently. Please follow [#5727] for updates on adding this functionality to the Terminal.
 
+
+[#603]: https://github.com/microsoft/terminal/issues/603
 [#5727]: https://github.com/microsoft/terminal/issues/5727
+[#7158]: https://github.com/microsoft/terminal/issues/7158
 [#8888]: https://github.com/microsoft/terminal/issues/8888
 [#9992]: https://github.com/microsoft/terminal/issues/9992
 [#9996]: https://github.com/microsoft/terminal/issues/9996
+[microsoft/microsoft-ui-xaml#1247]: https://github.com/microsoft/microsoft-ui-xaml/1247
