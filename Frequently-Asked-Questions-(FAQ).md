@@ -2,6 +2,31 @@ This page serves as a list of some of the more commonly encountered issues while
 
 In addition to this FAQ, please make sure to refer to the [official docs](https://docs.microsoft.com/en-us/windows/terminal). There you can find more detailed info on features of the Terminal, the available settings and how they work, and various tips and tricks for using the Terminal.
 
+<hr>
+
+<!-- Protip: https://ecotrust-canada.github.io/markdown-toc/ to generate this -->
+
+#### Table of Contents
+- [General](#general)
+  * [Where can I find the settings file?](#where-can-i-find-the-settings-file-)
+  * [The Terminal window disappears immediately on launch!](#the-terminal-window-disappears-immediately-on-launch-)
+  * [Can I use the Terminal on (Windows 7, Windows Server 2019, any other down-level Windows version)](#can-i-use-the-terminal-on--windows-7--windows-server-2019--any-other-down-level-windows-version-)
+  * [`wt.exe` stopped working](#-wtexe--stopped-working)
+  * [Windows Terminal fails to run as Administrator](#windows-terminal-fails-to-run-as-administrator)
+- [Transparency](#transparency)
+  * [Why does acrylic not work?](#why-does-acrylic-not-work-)
+  * [Can I have non-blurred transparency?](#can-i-have-non-blurred-transparency-)
+- [Quake Mode & Global Summon](#quake-mode---global-summon)
+  * [What is "Global Summon"](#what-is--global-summon-)
+  * [What is "Quake Mode"?](#what-is--quake-mode--)
+  * [I can't use the `quakeMode`/`globalSummon` keybinding unless I've already launched the Terminal](#i-can-t-use-the--quakemode---globalsummon--keybinding-unless-i-ve-already-launched-the-terminal)
+  * [How do I set the size of the `quakeMode` window?](#how-do-i-set-the-size-of-the--quakemode--window-)
+  * [The `quakeMode` window doesn't have any tabs / How can I have tabs in the quake window](#the--quakemode--window-doesn-t-have-any-tabs---how-can-i-have-tabs-in-the-quake-window)
+  * [I want to use a different hotkey to summon different profiles](#i-want-to-use-a-different-hotkey-to-summon-different-profiles)
+  * [I want the Terminal to hide on minimize / minimize to the tray](#i-want-the-terminal-to-hide-on-minimize---minimize-to-the-tray)
+
+<hr>
+
 ### General
 
 #### Where can I find the settings file?
