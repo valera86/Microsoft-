@@ -34,6 +34,7 @@ This is a list of all the megathreads we're currently tracking, and a brief summ
 * [ ] [#7001] - Tests we should maybe write someday
 * [ ] [#8888] - Quake Mode & Global Summon
 * [ ] [#9001] - Infinite buffer support follow-ups
+* [ ] [#10563] - vtebench tracking issue 
 
 
 ### Things probably needing threads
@@ -67,3 +68,4 @@ This is a list of all the megathreads we're currently tracking, and a brief summ
 [#7001]: https://github.com/microsoft/terminal/issues/7001
 [#8888]: https://github.com/microsoft/terminal/issues/8888
 [#9001]: https://github.com/microsoft/terminal/issues/9001
+[#10563]: https://github.com/microsoft/terminal/issues/10563
