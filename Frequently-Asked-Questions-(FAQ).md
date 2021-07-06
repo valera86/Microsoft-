@@ -22,6 +22,14 @@ Unfortunately no, and we have no plans to make the Terminal available on operati
 
 These are unfortunately features that aren't going to be back-ported to earlier versions of Windows, so we won't be able to bring the Terminal to those versions either.
 
+#### `wt.exe` stopped working
+
+This is something that can happen intermittently whenever the Terminal is updated. Something in the upgrade process causes the execution alias to stop working correctly. You might get an error message like:
+
+> Windows cannot find 'C:\Users\richard\AppData\Local\Microsoft\WindowsApps\wt.exe'. Make sure >you've typed the name correctly, then try again.
+
+Most of the time, you can resolve this by toggling the App Execution Alias for WT off then on the screen at https://stackoverflow.com/a/66539884/1743
+
 ### Transparency
 
 #### Why does acrylic not work?
