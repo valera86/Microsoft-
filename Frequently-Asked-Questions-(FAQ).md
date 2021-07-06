@@ -26,9 +26,17 @@ These are unfortunately features that aren't going to be back-ported to earlier 
 
 This is something that can happen intermittently whenever the Terminal is updated. Something in the upgrade process causes the execution alias to stop working correctly. You might get an error message like:
 
-> Windows cannot find 'C:\Users\richard\AppData\Local\Microsoft\WindowsApps\wt.exe'. Make sure >you've typed the name correctly, then try again.
+> Windows cannot find 'C:\Users\username\AppData\Local\Microsoft\WindowsApps\wt.exe'. Make sure you've typed the name correctly, then try again.
 
 Most of the time, you can resolve this by toggling the App Execution Alias for WT off then on the screen at https://stackoverflow.com/a/66539884/1743
+
+#### Windows Terminal fails to run as Administrator
+
+This can happen often if you're running the Terminal from a user profile that is _not_ an administrator, **AND** the Terminal isn't installed for your Admin account on this machine. You might see an error message like:
+
+![image](https://user-images.githubusercontent.com/31540828/121568349-86d38600-ca17-11eb-8735-c9c02912f603.png)
+
+This happens because packaged applications need to be installed for the Admin account to be able to be run elevated. **To fix this**: install the Terminal for your Admin account as well. There are more details in [#7806]. We're working with the platform team to try and fix this issue, and get the fix brought to downlevel Windows versions. We'll update this if this issue is resolved. 
 
 ### Transparency
 
@@ -96,6 +104,7 @@ This is a feature that's commonly associated with Quake Mode. Unfortunately, it 
 [#603]: https://github.com/microsoft/terminal/issues/603
 [#5727]: https://github.com/microsoft/terminal/issues/5727
 [#7158]: https://github.com/microsoft/terminal/issues/7158
+[#7806]: https://github.com/microsoft/terminal/issues/7806
 [#8888]: https://github.com/microsoft/terminal/issues/8888
 [#9992]: https://github.com/microsoft/terminal/issues/9992
 [#9996]: https://github.com/microsoft/terminal/issues/9996
