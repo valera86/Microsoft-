@@ -24,7 +24,14 @@ In addition to this FAQ, please make sure to refer to the [official docs](https:
   * [The `quakeMode` window doesn't have any tabs / How can I have tabs in the quake window](#the--quakemode--window-doesn-t-have-any-tabs---how-can-i-have-tabs-in-the-quake-window)
   * [I want to use a different hotkey to summon different profiles](#i-want-to-use-a-different-hotkey-to-summon-different-profiles)
   * [I want the Terminal to hide on minimize / minimize to the tray](#i-want-the-terminal-to-hide-on-minimize---minimize-to-the-tray)
-
+- [Other](#other)
+  * [Why do we avoid changing CMD.exe?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#cmd)
+  * [Why is typing-to-screen performance better than every other app?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#screenPerf)
+  * [How are the Windows graphics/messaging stack assembled?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#gfxMsgStack)
+  * [Output Processing between "Far East" and "Western"](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#fesb)
+  * [Why do we not backport things?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#backport)
+  * [Why can't we have mixed elevated and non-elevated tabs in the Terminal?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#elevation)
+  * [What's the difference between a shell and a terminal?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#shell-vs-terminal)
 <hr>
 
 ### General
@@ -125,6 +132,17 @@ This is another scenario that'll have to wait for [#9992]. What you'd end up wit
 
 This is a feature that's commonly associated with Quake Mode. Unfortunately, it didn't quite make the cut for 1.9. Never fear! We're working on it currently. Please follow [#5727] for updates on adding this functionality to the Terminal.
 
+### Other
+
+This is a small list of FAQ-like questions that have had lengthy replies in the past. They're all preserved in the doc [`niksa.md`](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md)
+
+- [Why do we avoid changing CMD.exe?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#cmd)
+- [Why is typing-to-screen performance better than every other app?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#screenPerf)
+- [How are the Windows graphics/messaging stack assembled?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#gfxMsgStack)
+- [Output Processing between "Far East" and "Western"](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#fesb)
+- [Why do we not backport things?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#backport)
+- [Why can't we have mixed elevated and non-elevated tabs in the Terminal?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#elevation)
+- [What's the difference between a shell and a terminal?](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#shell-vs-terminal)
 
 [#603]: https://github.com/microsoft/terminal/issues/603
 [#5727]: https://github.com/microsoft/terminal/issues/5727
