@@ -11,6 +11,7 @@ In addition to this FAQ, please make sure to refer to the [official docs](https:
   * [Where can I find the settings file?](#where-can-i-find-the-settings-file-)
   * [The Terminal window disappears immediately on launch!](#the-terminal-window-disappears-immediately-on-launch-)
   * [Can I use the Terminal on (Windows 7, Windows Server 2019, any other down-level Windows version)](#can-i-use-the-terminal-on--windows-7--windows-server-2019--any-other-down-level-windows-version-)
+  * [What about porting the Windows Terminal to MacOS or Linux?](#What-about-porting-the-Windows-Terminal-to-MacOS-or-Linux)
   * [`wt.exe` stopped working](#-wtexe--stopped-working)
   * [Windows Terminal fails to run as Administrator](#windows-terminal-fails-to-run-as-administrator)
 - [Transparency](#transparency)
@@ -53,6 +54,10 @@ Unfortunately no, and we have no plans to make the Terminal available on operati
 * 1903 Also added support for side-by-side WinRT component activation, something deep in the COM stack that lets us find our DLLs when they're right next to our EXE.
 
 These are unfortunately features that aren't going to be back-ported to earlier versions of Windows, so we won't be able to bring the Terminal to those versions either.
+
+#### What about porting the Windows Terminal to MacOS or Linux?
+<!-- #2331 #504 #563 #624 #2466 #699 #498 #6074 #4235 -->
+The answer is actually basically the same as the above. Windows Terminal requires a good number of Windows-specific technologies. We unfortunately won't be supporting it on Mac or anywhere else any time soon. There are some really good terminals on OS X, including iTerm and Hyper, and an uncountable number of good terminals on Linux.
 
 #### `wt.exe` stopped working
 
