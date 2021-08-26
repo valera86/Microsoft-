@@ -75,6 +75,10 @@ This can happen often if you're running the Terminal from a user profile that is
 
 This happens because packaged applications need to be installed for the Admin account to be able to be run elevated. **To fix this**: install the Terminal for your Admin account as well. There are more details in [#7806]. We're working with the platform team to try and fix this issue, and get the fix brought to downlevel Windows versions. We'll update this if this issue is resolved. 
 
+#### How do changes to the console in this repo get to `conhost.exe` in the OS?
+
+Every couple of weeks (time permitting), one of our team members merges the changes from this repository's `main` branch into an internal mirror's `inbox` branch. Once that happens, another tool called `git2git` migrates the tree from that internal mirror into a directory on our team's branch in the Windows OS git repository. Some weeks later, that branch's content has made its way to `main`, which is approximately where Insider builds come from. The time it takes to get from our team's branch to the Windows `main` branch is dependent on many factors, so it can range from 2-6 weeks. 
+
 ### Transparency
 
 #### Why does acrylic not work?
