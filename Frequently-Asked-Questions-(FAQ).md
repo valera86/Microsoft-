@@ -43,6 +43,8 @@ The settings file can be found in the following location:
 * Windows Terminal (Stable): `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 * Windows Terminal (Preview): `%localappdata%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json`
 
+Additionally in that directory is the `state.json` file, which contains additional state that the Terminal generates at runtime.
+
 #### The Terminal window disappears immediately on launch!
 
 Before filing a bug, please check your settings file to see if you have `"closeOnExit": "always"` set. It's possible that the Terminal window is closing when the shell application closed immediately, or it's possible that the commandline failed to launch entirely. `"closeOnExit": "graceful"` will help debug if that's the case.
@@ -78,6 +80,10 @@ This happens because packaged applications need to be installed for the Admin ac
 #### How do changes to the console in this repo get to `conhost.exe` in the OS?
 
 Every couple of weeks (time permitting), one of our team members merges the changes from this repository's `main` branch into an internal mirror's `inbox` branch. Once that happens, another tool called `git2git` migrates the tree from that internal mirror into a directory on our team's branch in the Windows OS git repository. Some weeks later, that branch's content has made its way to `main`, which is approximately where Insider builds come from. The time it takes to get from our team's branch to the Windows `main` branch is dependent on many factors, so it can range from 2-6 weeks. 
+
+#### Unable to set Windows Terminal as the Default Terminal on Windows 11
+
+Currently, this is by design. You can set the Preview version of the Windows Terminal as the Default Terminal, but not the Stable version. We're currently working through a few more bugs that we'd like to get sorted before allowing the Stable version to be set as the Default Terminal on Windows.
 
 ### Transparency
 
