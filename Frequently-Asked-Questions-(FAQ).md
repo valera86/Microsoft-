@@ -35,6 +35,27 @@ These are unfortunately features that aren't going to be back-ported to earlier 
 <!-- #2331 #504 #563 #624 #2466 #699 #498 #6074 #4235 -->
 The answer is actually basically the same as the above. Windows Terminal requires a good number of Windows-specific technologies. We unfortunately won't be supporting it on Mac or anywhere else any time soon. There are some really good terminals on OS X, including iTerm and Hyper, and an uncountable number of good terminals on Linux.
 
+#### Why am I seeing `[process exited with code ...]`?
+
+This message is printed by the Terminal whenever the client application closes with a non-zero exit code. Notably, `exit` in `cmd.exe` will also return the exit code of the command that was previously run. So if you happen to type something like
+
+```cmd
+> foo
+'foo' is not recognized as an internal or external command,
+operable program or batch file.
+> exit
+[process exited with code 9009]
+``` 
+You'll see this message, because `cmd` returned the `9009` from the original failure to find `foo`.
+
+This behavior exists to stop an error message printed out by a program from _disappearing instantly_ when it exits. There is a class of applications for which that is extremely important. This is a behavior that's highly conserved across multiple shells and terminal emulators on most mainstream operating systems. We're following this behavior because it is the right behavior to follow, _and because you can turn it off with a config option very easily!_
+
+If you'd rather it just exit every time, you can set `"closeOnExit": "always"`. For more information, please [check out the docs for this setting](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-advanced#profile-termination-behavior). In the Settings UI, this setting can be found here: 
+
+![closeOnExit setting in UI](https://user-images.githubusercontent.com/3933920/132601625-d6a9fce7-ab5a-41fa-bc92-4d37830854d4.png)
+
+See also: [#4223 (comment)](https://github.com/microsoft/terminal/issues/4223#issuecomment-574834181).
+
 #### `wt.exe` stopped working
 
 This is something that can happen intermittently whenever the Terminal is updated. Something in the upgrade process causes the execution alias to stop working correctly. You might get an error message like:
