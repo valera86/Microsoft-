@@ -92,9 +92,7 @@ We're currently using [#7158] to track adding support for "enable acrylic even f
 
 #### Can I have non-blurred transparency?
 
-At the moment, no. The thread with the most up-to-date investigation tracking this is [#603]. In [#603 (comment)](https://github.com/microsoft/terminal/issues/603#issuecomment-552470153), we experimented with whole-window unblurred transparency, but as you can see, the prototype wasn't particularly polished. 
-
-At current, the Terminal team is waiting until after Terminal 2.0 to migrate to WinUI 3. We're working with the WinUI team to get this added in to WinUI 3.0. Upstream, this is being tracked in [microsoft/microsoft-ui-xaml#1247]. This is the path we'll be pursuing to get this feature added to the Terminal, because driving this solution also means driving an important dev platform feature for the entire platform, one that'll help improve other applications on Windows as well. This solution will allow us to make individual elements of the Terminal window transparent, rather than the entire window.
+This is currently in a pull request! Please check out https://github.com/microsoft/terminal/pull/11180.
 
 ### Quake Mode & Global Summon
 
