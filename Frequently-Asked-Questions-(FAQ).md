@@ -19,6 +19,18 @@ The settings file can be found in the following location:
 
 Additionally in that directory is the `state.json` file, which contains additional state that the Terminal generates at runtime.
 
+#### Unable to find the selected font "Cascadia Mono"
+
+There is a bug in the application deployment platform on recent versions of Windows that results in the Cascadia Mono font (the default font) being unreadable.
+
+![image](https://user-images.githubusercontent.com/34492055/114411512-17e5c800-9b61-11eb-8818-3728d8764a8e.png)
+
+Unfortunately, that means that through no fault of your own, you'll get a dialog that says we can't find Cascadia Mono or Cascadia Code.
+
+**KNOWN SOLUTIONS**:
+* Either reboot or
+* choose to "Repair" the Terminal application in the "All apps" list in Settings.
+
 #### The Terminal window disappears immediately on launch!
 
 Before filing a bug, please check your settings file to see if you have `"closeOnExit": "always"` set. It's possible that the Terminal window is closing when the shell application closed immediately, or it's possible that the commandline failed to launch entirely. `"closeOnExit": "graceful"` will help debug if that's the case.
